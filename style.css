@@ -436,6 +436,56 @@ p  { color: var(--text-muted); }
 .diff-card h4 { margin-bottom: 8px; }
 .diff-card p  { font-size: 0.88rem; }
 
+/* ── TEAM ────────────────────────────────────────────────────────── */
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.team-card {
+  padding: 36px 28px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  background: var(--bg);
+  text-align: center;
+  transition: box-shadow var(--transition), transform var(--transition);
+}
+.team-card:hover {
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-2px);
+}
+
+.team-avatar {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #FFF7ED 0%, #FED7AA 100%);
+  border: 2px solid #FED7AA;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: var(--accent-dark);
+  letter-spacing: -0.02em;
+  margin: 0 auto 20px;
+}
+
+.team-card h3 { margin-bottom: 6px; }
+
+.team-role {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 16px;
+}
+
+.team-card p { font-size: 0.9rem; }
+
 /* ── FAQ ─────────────────────────────────────────────────────────── */
 .faq-container { max-width: 720px; }
 
@@ -692,7 +742,8 @@ p  { color: var(--text-muted); }
   .section { padding: 64px 0; }
   .section-header { margin-bottom: 40px; }
 
-  .diff-grid { grid-template-columns: 1fr; }
+  .diff-grid  { grid-template-columns: 1fr; }
+  .team-grid  { grid-template-columns: 1fr; max-width: 360px; margin: 0 auto; }
 
   .cta-actions { flex-direction: column; align-items: stretch; text-align: center; }
   .btn-outline-white { justify-content: center; }
