@@ -1,7 +1,7 @@
 /* ── Variables ─────────────────────────────────────────────────── */
 :root {
   --bg:          #FFFFFF;
-  --bg-alt:      #F1F5F9;
+  --bg-alt:      #EDF0F4;
   --text:        #0F172A;
   --text-muted:  #64748B;
   --text-light:  #94A3B8;
@@ -485,6 +485,11 @@ p  { color: var(--text-muted); }
 }
 
 .team-card p { font-size: 0.9rem; }
+
+/* cards inside alt-bg sections lose the white fill to avoid layering */
+.bg-alt .process-step,
+.bg-alt .team-card { background: transparent; }
+.bg-alt .team-card:hover { background: rgba(255,255,255,0.5); }
 
 /* ── FAQ ─────────────────────────────────────────────────────────── */
 .faq-container { max-width: 720px; }
