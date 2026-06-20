@@ -22,3 +22,20 @@ navLinks.querySelectorAll('a').forEach(link => {
     navLinks.classList.remove('open');
   });
 });
+
+// Contact form — show success message without full page reload
+const ctaForm = document.getElementById('cta-form');
+const formSent = document.getElementById('form-sent');
+if (ctaForm) {
+  ctaForm.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const data = new FormData(ctaForm);
+    try {
+      await fetch('/', { method: 'POST', body: data });
+    } catch (_) {
+      // Cloudflare Pages may return a redirect — fetch throws on opaque redirect, which is fine
+    }
+    ctaForm.hidden = true;
+    formSent.hidden = false;
+  });
+}

@@ -368,10 +368,11 @@
 
 <!-- CTA BANNER -->
 <section class="cta-banner" id="contato">
-  <div class="container cta-inner">
-    <h2>Pronto para vender mais?</h2>
-    <p>Fale com a gente e descubra como o tráfego pago pode impulsionar o seu negócio. Sem compromisso.</p>
-    <div class="cta-actions">
+  <div class="container cta-split">
+
+    <div class="cta-left">
+      <h2>Pronto para vender mais?</h2>
+      <p>Fale direto pelo WhatsApp e receba uma análise das suas campanhas sem compromisso.</p>
       <a href="https://wa.me/554491770907?text=Ol%C3%A1!%20Gostaria%20de%20saber%20mais%20sobre%20gest%C3%A3o%20de%20tr%C3%A1fego%20pago."
          class="btn btn-orange btn-large" target="_blank" rel="noopener">
         <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
@@ -379,10 +380,49 @@
         </svg>
         Falar pelo WhatsApp
       </a>
-      <a href="mailto:contato@nexusgt.com.br" class="btn-outline-white">
-        contato@nexusgt.com.br
-      </a>
     </div>
+
+    <div class="cta-divider" aria-hidden="true">
+      <span>ou</span>
+    </div>
+
+    <div class="cta-right">
+      <p class="cta-form-title">Prefere que a gente entre em contato?</p>
+      <form
+        name="contato"
+        method="POST"
+        data-static-form-name="contato"
+        class="cta-form"
+        id="cta-form"
+      >
+        <div class="form-group">
+          <label for="f-nome">Nome</label>
+          <input type="text" id="f-nome" name="nome" placeholder="Seu nome" required autocomplete="name">
+        </div>
+        <div class="form-group">
+          <label for="f-whatsapp">WhatsApp</label>
+          <input type="tel" id="f-whatsapp" name="whatsapp" placeholder="(44) 99999-9999" required autocomplete="tel">
+        </div>
+        <div class="form-group">
+          <label for="f-orcamento">Investimento mensal em anúncios</label>
+          <select id="f-orcamento" name="orcamento" required>
+            <option value="" disabled selected>Selecione uma faixa</option>
+            <option value="ate-2k">Até R$ 2.000</option>
+            <option value="2k-5k">R$ 2.000 – R$ 5.000</option>
+            <option value="5k-15k">R$ 5.000 – R$ 15.000</option>
+            <option value="acima-15k">Acima de R$ 15.000</option>
+            <option value="nao-anuncio">Ainda não anuncio</option>
+          </select>
+        </div>
+        <button type="submit" class="btn btn-orange btn-large btn-full">
+          Solicitar análise gratuita
+        </button>
+      </form>
+      <p class="form-sent" id="form-sent" hidden>
+        Recebemos! Entraremos em contato em até 1 dia útil.
+      </p>
+    </div>
+
   </div>
 </section>
 
