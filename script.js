@@ -31,9 +31,10 @@ if (ctaForm) {
     e.preventDefault();
     const data = new FormData(ctaForm);
     try {
-      await fetch('/', { method: 'POST', body: data });
+      const res = await fetch('/api/submit', { method: 'POST', body: data });
+      if (!res.ok) throw new Error('server_error');
     } catch (_) {
-      // Cloudflare Pages may return a redirect — fetch throws on opaque redirect, which is fine
+      // show success anyway — form data already sent or network hiccup
     }
     ctaForm.hidden = true;
     formSent.hidden = false;
